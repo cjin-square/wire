@@ -18,6 +18,7 @@ dependencies {
   implementation(projects.wireRuntime)
   implementation(projects.wireGrpcClient)
   implementation(projects.wireGrpcServerGenerator)
+  implementation(platform(libs.okio.bom.get()))
   implementation(libs.okio.core)
   api(libs.kotlinpoet)
   implementation(libs.guava)

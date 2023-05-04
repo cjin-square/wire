@@ -56,6 +56,7 @@ kotlin {
     }
     val commonMain by getting {
       dependencies {
+        api(platform(libs.okio.bom.get()))
         api(libs.okio.core)
       }
     }

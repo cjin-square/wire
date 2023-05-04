@@ -34,7 +34,7 @@ val generateSwiftProtos by tasks.creating(JavaExec::class) {
   }
 
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
     "--proto_path=$protoPath",
     "--swift_out=$swiftOut",
@@ -80,7 +80,7 @@ val generateSampleProtos by tasks.creating(JavaExec::class) {
   }
 
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
     "--proto_path=$protoPath",
     "--swift_out=$swiftOut"
@@ -98,7 +98,7 @@ val generateTestProtos by tasks.creating(JavaExec::class) {
   }
 
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
     "--proto_path=$protoPath",
     "--swift_out=$swiftOut"

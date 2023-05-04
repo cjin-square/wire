@@ -10,6 +10,7 @@ buildscript {
     classpath(libs.okio.core)
   }
   repositories {
+    gradlePluginPortal()
     mavenCentral()
   }
 }
@@ -36,11 +37,11 @@ dependencies {
 
 // JAVA
 
-val generateJavaTests by tasks.creating(JavaExec::class) {
+val generateJavaTests by tasks.creating(org.gradle.api.tasks.JavaExec::class) {
   group = "Generate Tests"
   description = "Generates Java classes from the test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
       "--proto_path=wire-tests/src/commonTest/proto/java",
       "--java_out=wire-tests/src/jvmJavaTest/proto-java",
@@ -54,7 +55,7 @@ val generateNoOptionsTests by tasks.creating(JavaExec::class) {
   group = "Generate Tests"
   description = "Generates Java classes with no options from the test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
       "--proto_path=wire-tests/src/commonTest/proto/java",
       "--java_out=wire-tests/src/jvmJavaNoOptionsTest/proto-java",
@@ -70,7 +71,7 @@ val generateCompactTests by tasks.creating(JavaExec::class) {
   group = "Generate Tests"
   description = "Generates compact Java classes from the test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
       "--proto_path=wire-tests/src/commonTest/proto/java",
       "--java_out=wire-tests/src/jvmJavaCompactTest/proto-java",
@@ -85,7 +86,7 @@ val generateGsonAdapterCompactJavaTests by tasks.creating(JavaExec::class) {
   group = "Generate GsonAdapter Compact Java Tests"
   description = "Generates compat Java classes from the GsonAdapter test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto2",
           "--java_out=wire-gson-support/src/test/java",
@@ -98,7 +99,7 @@ val generateGsonAdapterJavaTests by tasks.creating(JavaExec::class) {
   group = "Generate GsonAdapter Java Tests"
   description = "Generates Java classes from the GsonAdapter test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto2",
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto3",
@@ -114,7 +115,7 @@ val generateGsonAdapterInteropKotlinTests by tasks.creating(JavaExec::class) {
   group = "Generate GsonAdapter Java interop Kotlin Tests"
   description = "Generates Java interop Kotlin classes from the GsonAdapter test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto2",
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto3",
@@ -130,7 +131,7 @@ val generateGsonAdapterKotlinTests by tasks.creating(JavaExec::class) {
   group = "Generate GsonAdapter Kotlin Tests"
   description = "Generates Kotlin classes from the GsonAdapter test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto2",
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto3",
@@ -160,7 +161,7 @@ val generateIncludesExcludesTests by tasks.creating(JavaExec::class) {
   group = "Generate Tests"
   description = "Generates Java classes with included and excluded protos from the test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
       "--proto_path=wire-tests/src/commonTest/proto/java",
       "--java_out=wire-tests/src/jvmJavaPrunedTest/proto-java",
@@ -176,7 +177,7 @@ val generateAndroidTests by tasks.creating(JavaExec::class) {
   group = "Generate Tests"
   description = "Generates Java classes for Android from the test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
       "--proto_path=wire-tests/src/commonTest/proto/java",
       "--java_out=wire-tests/src/jvmJavaAndroidTest/proto-java",
@@ -191,7 +192,7 @@ val generateAndroidCompactTests by tasks.creating(JavaExec::class) {
   group = "Generate Tests"
   description = "Generates compact Java classes for Android from the test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
       "--proto_path=wire-tests/src/commonTest/proto/java",
       "--java_out=wire-tests/src/jvmJavaAndroidCompactTest/proto-java",
@@ -207,7 +208,7 @@ val generateKotlinTests by tasks.creating(JavaExec::class) {
   group = "Generate Tests"
   description = "Generates Kotlin classes from the test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
       "--proto_path=wire-tests/src/commonTest/proto/kotlin",
       "--kotlin_out=wire-tests/src/commonTest/proto-kotlin",
@@ -243,7 +244,7 @@ val generateKotlinZipTests by tasks.creating(JavaExec::class) {
   group = "Generate Tests"
   description = "Generates Kotlin classes from the test jar"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
       "--proto_path=wire-tests/src/commonTest/proto/kotlin/protos.jar",
       "--kotlin_out=wire-tests/src/commonTest/proto-kotlin",
@@ -258,7 +259,7 @@ val generateProto3KotlinTests by tasks.creating(JavaExec::class) {
   group = "Generate Tests"
   description = "Generates Kotlin classes from the test proto3s"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
           "--proto_path=wire-tests/src/commonTest/proto3/kotlin",
           "--kotlin_out=wire-tests/src/commonTest/proto-kotlin",
@@ -273,7 +274,7 @@ val generateProto3JavaTests by tasks.creating(JavaExec::class) {
   group = "Generate Tests"
   description = "Generates Kotlin classes from the test proto3s"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
           "--proto_path=wire-tests/src/commonTest/proto3/java",
           "--java_out=wire-tests/src/jvmJavaTest/proto-java",
@@ -288,7 +289,7 @@ val generateKotlinServicesTests by tasks.creating(JavaExec::class) {
   group = "Generate Tests"
   description = "Generates Kotlin classes from the test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
       "--proto_path=wire-tests/src/commonTest/proto/kotlin",
       "--kotlin_out=wire-tests/src/jvmKotlinInteropTest/proto-kotlin",
@@ -303,7 +304,7 @@ val generateKotlinAndroidTests by tasks.creating(JavaExec::class) {
   group = "Generate Tests"
   description = "Generates Kotlin classes for Android from the test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
       "--proto_path=wire-tests/src/commonTest/proto/kotlin",
       "--kotlin_out=wire-tests/src/jvmKotlinAndroidTest/proto-kotlin",
@@ -318,7 +319,7 @@ val generateKotlinJavaInteropTests by tasks.creating(JavaExec::class) {
   group = "Generate Tests"
   description = "Generates Kotlin classes with Java interop from the test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
       "--proto_path=wire-tests/src/commonTest/proto/kotlin",
       "--kotlin_out=wire-tests/src/jvmKotlinInteropTest/proto-kotlin",
@@ -353,7 +354,7 @@ val generateJavaForKotlinJavaInteropTests by tasks.creating(JavaExec::class) {
   group = "Generate Tests"
   description = "Generates one Java class which will depend on a Kotlin generated annotation"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
     "--proto_path=wire-tests/src/commonTest/proto/java",
     "--java_out=wire-tests/src/jvmKotlinInteropTest/proto-kotlin",
@@ -374,7 +375,7 @@ val generateSwiftProto3Tests by tasks.creating(JavaExec::class) {
   group = "Generate Tests"
   description = "Generates Swift classes from the test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
     "--proto_path=wire-tests/src/commonTest/proto3/kotlin",
     "--swift_out=$swiftOut",
@@ -394,7 +395,7 @@ val generateSwiftProto2Tests by tasks.creating(JavaExec::class) {
   group = "Generate Tests"
   description = "Generates Swift classes from the test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
     "--proto_path=wire-tests/src/commonTest/proto/kotlin",
     "--swift_out=$swiftOut",
@@ -449,7 +450,7 @@ val generateGrpcTests by tasks.creating(JavaExec::class) {
   group = "Generate gRPC Tests"
   description = "Generates Kotlin classes from the gRPC test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
           "--proto_path=wire-grpc-tests/src/test/proto",
           "--kotlin_out=wire-grpc-tests/src/test/proto-grpc",
@@ -463,7 +464,7 @@ val generateMoshiAdapterCompactJavaTests by tasks.creating(JavaExec::class) {
   group = "Generate MoshiAdapter Compact Java Tests"
   description = "Generates compat Java classes from the MoshiAdapter test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto2",
           "--java_out=wire-moshi-adapter/src/test/java",
@@ -476,7 +477,7 @@ val generateMoshiAdapterJavaTests by tasks.creating(JavaExec::class) {
   group = "Generate MoshiAdapter Java Tests"
   description = "Generates Java classes from the MoshiAdapter test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto2",
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto3",
@@ -493,7 +494,7 @@ val generateMoshiAdapterInteropKotlinTests by tasks.creating(JavaExec::class) {
   group = "Generate MoshiAdapter Java interop Kotlin Tests"
   description = "Generates Java interop Kotlin classes from the MoshiAdapter test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto2",
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto3",
@@ -510,7 +511,7 @@ val generateMoshiAdapterKotlinTests by tasks.creating(JavaExec::class) {
   group = "Generate MoshiAdapter Kotlin Tests"
   description = "Generates Kotlin classes from the MoshiAdapter test protos"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto2",
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto3",
@@ -540,7 +541,7 @@ val generateSharedJsonCompactJavaTests by tasks.creating(JavaExec::class) {
   group = "Generate Shared JSON Tests"
   description = "Generates compat Java classes for shared JSON tests"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto2",
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto3",
@@ -562,7 +563,7 @@ val generateSharedJsonKotlinTests by tasks.creating(JavaExec::class) {
   group = "Generate Shared JSON Tests"
   description = "Generates Kotlin classes for shared JSON tests"
   classpath = wire
-  main = "com.squareup.wire.WireCompiler"
+  mainClass.set("com.squareup.wire.WireCompiler")
   args = listOf(
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto2",
           "--proto_path=wire-tests/src/commonTest/shared/proto/proto3",

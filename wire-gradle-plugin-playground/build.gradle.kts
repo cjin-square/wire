@@ -16,7 +16,6 @@ wire {
 dependencies {
   implementation(projects.wireGrpcClient)
   implementation(libs.okio.core)
-  implementation(projects.wireCompiler)
   implementation(projects.wireGsonSupport)
   implementation(projects.wireMoshiAdapter)
   implementation(libs.assertj)
