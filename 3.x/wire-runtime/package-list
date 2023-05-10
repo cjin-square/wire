@@ -185,6 +185,7 @@ $dokka.location:com.squareup.wire/ProtoAdapter/redact/#TypeParam(bounds=[kotlin.
 $dokka.location:com.squareup.wire/ProtoAdapter/sourceFile/#/PointingToDeclaration/wire-runtime/com.squareup.wire/-proto-adapter/source-file.md
 $dokka.location:com.squareup.wire/ProtoAdapter/syntax/#/PointingToDeclaration/wire-runtime/com.squareup.wire/-proto-adapter/syntax.md
 $dokka.location:com.squareup.wire/ProtoAdapter/toString/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/wire-runtime/com.squareup.wire/-proto-adapter/to-string.md
+$dokka.location:com.squareup.wire/ProtoAdapter/tryDecode/#com.squareup.wire.ProtoReader#kotlin.collections.MutableList[TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/wire-runtime/com.squareup.wire/-proto-adapter/try-decode.md
 $dokka.location:com.squareup.wire/ProtoAdapter/type/#/PointingToDeclaration/wire-runtime/com.squareup.wire/-proto-adapter/type.md
 $dokka.location:com.squareup.wire/ProtoAdapter/typeUrl/#/PointingToDeclaration/wire-runtime/com.squareup.wire/-proto-adapter/type-url.md
 $dokka.location:com.squareup.wire/ProtoReader.Companion///PointingToDeclaration/wire-runtime/com.squareup.wire/-proto-reader/-companion/index.md
