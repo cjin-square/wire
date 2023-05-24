@@ -681,7 +681,7 @@ class <a href="./">WireCompiler</a></p>
 <p>&ndash;schema_handler_factory_class should be used if you want a custom SchemaHandler to be called. The factory class itself should be included in your classpath. If set, custom_out should also be provided and will passed to the factory&rsquo;s handler as a location to where it will be able to write files.</p>
 <p>If the &ndash;includes flag is present, its argument must be a comma-separated list of fully-qualified message or enum names. The output will be limited to those messages and enums that are (transitive) dependencies of the listed names. The &ndash;excludes flag excludes types, and takes precedence over &ndash;includes.</p>
 <p>If the &ndash;registry_class flag is present, its argument must be a Java class name. A class with the given name will be generated, containing a constant list of all extension classes generated during the compile. This list is suitable for passing to Wire&rsquo;s constructor at runtime for constructing its internal extension registry.</p>
-<p>The &ndash;dry_run flag causes the compile to just emit the names of the source files that would be generated to stdout.</p>
+<p>The &ndash;dry_run flag causes the compiler to just emit the names of the source files that would be generated to stdout.</p>
 <p>The &ndash;android flag will cause all messages to implement the Parcelable interface. This implies &ndash;android-annotations as well.</p>
 <p>The &ndash;android-annotations flag will add the Nullable annotation to optional fields.</p>
 <p>The &ndash;compact flag will emit code that uses reflection for reading, writing, and toString methods which are normally implemented with code generation.</p>

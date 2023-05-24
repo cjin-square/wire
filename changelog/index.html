@@ -576,6 +576,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-470" class="md-nav__link">
+    Version 4.7.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-462" class="md-nav__link">
     Version 4.6.2
   </a>
@@ -1225,6 +1232,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-470" class="md-nav__link">
+    Version 4.7.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-462" class="md-nav__link">
     Version 4.6.2
   </a>
@@ -1814,6 +1828,19 @@
 
 
 <h1 id="change-log">Change Log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h1>
+<h2 id="version-470">Version 4.7.0<a class="headerlink" href="#version-470" title="Permanent link">&para;</a></h2>
+<p><em>2023-05-24</em></p>
+<ul>
+<li>New: Add a dry run option. If enabled, the compiler will just emit the names of the source files that would be 
+  otherwise * generated to stdout. You can use the flag <code>--dry_run</code> with the Wire compiler or define the option with
+  Gradle as the following:</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="n">wire</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">dryRun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div>
+* Fix: Correctly set task dependencies on <code>processResources</code> if <code>protoLibrary</code> is set to true.
+* Fix: If a valid grpc-status header is present, raise a GrpcException rather than an IOException.</p>
 <h2 id="version-462">Version 4.6.2<a class="headerlink" href="#version-462" title="Permanent link">&para;</a></h2>
 <p><em>2023-05-11</em></p>
 <ul>

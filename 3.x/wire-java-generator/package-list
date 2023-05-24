@@ -19,5 +19,12 @@ $dokka.location:com.squareup.wire.java/JavaGenerator/withBuildersOnly/#boolean/P
 $dokka.location:com.squareup.wire.java/JavaGenerator/withCompact/#boolean/PointingToDeclaration/wire-java-generator/com.squareup.wire.java/-java-generator/with-compact.md
 $dokka.location:com.squareup.wire.java/JavaGenerator/withOptions/#boolean#boolean/PointingToDeclaration/wire-java-generator/com.squareup.wire.java/-java-generator/with-options.md
 $dokka.location:com.squareup.wire.java/JavaGenerator/withProfile/#com.squareup.wire.schema.Profile/PointingToDeclaration/wire-java-generator/com.squareup.wire.java/-java-generator/with-profile.md
+$dokka.location:com.squareup.wire.java/JavaSchemaHandler.Companion///PointingToDeclaration/wire-java-generator/com.squareup.wire.java/-java-schema-handler/-companion/index.md
+$dokka.location:com.squareup.wire.java/JavaSchemaHandler///PointingToDeclaration/wire-java-generator/com.squareup.wire.java/-java-schema-handler/index.md
+$dokka.location:com.squareup.wire.java/JavaSchemaHandler/JavaSchemaHandler/#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean/PointingToDeclaration/wire-java-generator/com.squareup.wire.java/-java-schema-handler/-java-schema-handler.md
+$dokka.location:com.squareup.wire.java/JavaSchemaHandler/handle/#com.squareup.wire.schema.Extend#com.squareup.wire.schema.Field#com.squareup.wire.schema.SchemaHandler.Context/PointingToDeclaration/wire-java-generator/com.squareup.wire.java/-java-schema-handler/handle.md
+$dokka.location:com.squareup.wire.java/JavaSchemaHandler/handle/#com.squareup.wire.schema.Schema#com.squareup.wire.schema.SchemaHandler.Context/PointingToDeclaration/wire-java-generator/com.squareup.wire.java/-java-schema-handler/handle.md
+$dokka.location:com.squareup.wire.java/JavaSchemaHandler/handle/#com.squareup.wire.schema.Service#com.squareup.wire.schema.SchemaHandler.Context/PointingToDeclaration/wire-java-generator/com.squareup.wire.java/-java-schema-handler/handle.md
+$dokka.location:com.squareup.wire.java/JavaSchemaHandler/handle/#com.squareup.wire.schema.Type#com.squareup.wire.schema.SchemaHandler.Context/PointingToDeclaration/wire-java-generator/com.squareup.wire.java/-java-schema-handler/handle.md
 com.squareup.wire.java
 

@@ -312,6 +312,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#dry-run" class="md-nav__link">
+    Dry run
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -827,6 +834,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#dry-run" class="md-nav__link">
+    Dry run
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1192,6 +1206,13 @@ clients. Such code will have <code>name</code>, as well as both the <code>age</c
 <p>This is most useful when building <code>.jar</code> files for other <code>wire</code> tasks to use as dependencies. Note
 that only the true sources are included – proto messages that are pruned or not used are not
 included in the output artifact.</p>
+<h3 id="dry-run">Dry run<a class="headerlink" href="#dry-run" title="Permanent link">&para;</a></h3>
+<p>With the dry run option, the compiler will just emit the names of the source files that would be otherwise generated to
+stdout.</p>
+<div class="highlight"><pre><span></span><code><span class="n">wire</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="n">dryRun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="o">}</span>
+</code></pre></div>
 <h2 id="customizing-output">Customizing Output<a class="headerlink" href="#customizing-output" title="Permanent link">&para;</a></h2>
 <h3 id="java">Java<a class="headerlink" href="#java" title="Permanent link">&para;</a></h3>
 <p>Here&rsquo;s an exhaustive Java configuration. Booleans are shown with their default behavior.</p>

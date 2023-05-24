@@ -87,6 +87,11 @@ $dokka.location:com.squareup.wire.schema/WireRun/treeShakingRoots/#/PointingToDe
 $dokka.location:com.squareup.wire.schema/WireRun/treeShakingRubbish/#/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-wire-run/tree-shaking-rubbish.md
 $dokka.location:com.squareup.wire.schema/WireRun/untilVersion/#/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-wire-run/until-version.md
 $dokka.location:com.squareup.wire////PointingToDeclaration/wire-compiler/com.squareup.wire/index.md
+$dokka.location:com.squareup.wire/DryRunFileSystem///PointingToDeclaration/wire-compiler/com.squareup.wire/-dry-run-file-system/index.md
+$dokka.location:com.squareup.wire/DryRunFileSystem/DryRunFileSystem/#okio.FileSystem/PointingToDeclaration/wire-compiler/com.squareup.wire/-dry-run-file-system/-dry-run-file-system.md
+$dokka.location:com.squareup.wire/DryRunFileSystem/appendingSink/#okio.Path#kotlin.Boolean/PointingToDeclaration/wire-compiler/com.squareup.wire/-dry-run-file-system/appending-sink.md
+$dokka.location:com.squareup.wire/DryRunFileSystem/openReadWrite/#okio.Path#kotlin.Boolean#kotlin.Boolean/PointingToDeclaration/wire-compiler/com.squareup.wire/-dry-run-file-system/open-read-write.md
+$dokka.location:com.squareup.wire/DryRunFileSystem/sink/#okio.Path#kotlin.Boolean/PointingToDeclaration/wire-compiler/com.squareup.wire/-dry-run-file-system/sink.md
 $dokka.location:com.squareup.wire/WireCompiler.Companion///PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/-companion/index.md
 $dokka.location:com.squareup.wire/WireCompiler.Companion/CODE_GENERATED_BY_WIRE/#/PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/-companion/-c-o-d-e_-g-e-n-e-r-a-t-e-d_-b-y_-w-i-r-e.md
 $dokka.location:com.squareup.wire/WireCompiler.Companion/forArgs/#java.nio.file.FileSystem#com.squareup.wire.WireLogger#kotlin.Array[kotlin.String]/PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/-companion/for-args.md
