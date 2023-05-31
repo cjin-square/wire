@@ -86,6 +86,7 @@ source directory for the project so the generated sources are compiled by the Ko
 
 Replace `kotlin` with `java` to generate the Java sources instead.
 
+When `kotlin` or `java` is omitted from the Wire configuration, no files will be generated. If one of these is included, and no `sourcePath` declarations are made, this directory will be assumed to be the default directory to generate sources. 
 
 Inputs and Outputs
 ------------------
